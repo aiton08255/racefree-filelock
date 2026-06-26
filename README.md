@@ -4,6 +4,8 @@ A tiny (~220 LOC, zero required deps, Python 3.8+) **cross-process** PID-file lo
 
 Extracted from a private long-running system after an adversarial review found that a naive PID-file lock was admitting 5+ concurrent processes under load.
 
+> **Status (v0.1.0):** Source-only release. Not yet published to PyPI — install from GitHub (see [Install](#install) below). PyPI publish is planned.
+
 ---
 
 ## What this is
@@ -61,10 +63,25 @@ Stale-holder takeover uses `tempfile.NamedTemporaryFile` + `os.replace`, which i
 
 ## Install
 
+Until v0.1.0 lands on PyPI, install directly from GitHub:
+
 ```bash
-pip install racefree-filelock
+pip install git+https://github.com/aiton08255/racefree-filelock
 
 # Optional: psutil enables identity-aware liveness checks (recommended)
+pip install psutil
+```
+
+Or clone and install editable for local hacking:
+
+```bash
+git clone https://github.com/aiton08255/racefree-filelock
+pip install -e "./racefree-filelock[dev]"
+```
+
+Once published to PyPI (planned), the install will simplify to:
+
+```bash
 pip install racefree-filelock[psutil]
 ```
 
