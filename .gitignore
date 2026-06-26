@@ -1,0 +1,144 @@
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg
+*.egg-info/
+.eggs/
+.installed.cfg
+.python-version
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ===== Caches =====
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+.cache/
+
+# ===== Virtual envs =====
+.venv/
+.venv-*/
+venv/
+venv-*/
+env/
+ENV/
+
+# ===== Build artifacts =====
+dist/
+build/
+*.whl
+*.tar.gz
+sdist/
+wheels/
+
+# ===== Test / coverage =====
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+.hypothesis/
+
+# ===== Lock-file runtime artifacts =====
+# (this library WRITES .pid files — never commit one)
+*.pid
+
+# ===== Logs =====
+*.log
+logs/
+
+# ===== Editors / IDEs =====
+.idea/
+.vscode/
+.vscode-test/
+.history/
+*.swp
+*.swo
+*~
+.spyderproject
+.spyproject
+
+# ===== Claude Code / AI assistant metadata =====
+# (session transcripts, handovers — contain absolute paths + session IDs)
+.claude/
+.cursor/
+.aider*
+.continue/
+.codeium/
+
+# ===== OS =====
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+desktop.ini
+$RECYCLE.BIN/
+
+# ===== Node (defensive — in case JS tooling is added) =====
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnp.*
+
+# ===== SECRETS — never commit any of these =====
+.env
+.env.*
+*.env
+.envrc
+secrets/
+secret/
+credentials.json
+credentials.yaml
+credentials.yml
+*.key
+*.pem
+*.p12
+*.pfx
+*.cer
+*.crt
+*.csr
+*.der
+id_rsa
+id_dsa
+id_ecdsa
+id_ed25519
+service-account*.json
+gcp-key*.json
+firebase-adminsdk*.json
+aws-credentials*
+.aws/
+.gcp/
+.azure/
+config.local.*
+*.local
+*-secret.*
+*-secrets.*
+*.private.*
+private/
+
+# ===== AI/ML provider tokens (often land in dotfiles) =====
+.anthropic
+.openai
+.huggingface/
+.cache/huggingface/
+.cohere
+.replicate
+.together
+
+# ===== Databases (defensive) =====
+*.sqlite
+*.sqlite3
+*.db
+
+# ===== Allow these template/sample files =====
+# (negation must come AFTER the broader ignore rule)
+!.env.example
+!.env.sample
+!.env.template
+!*.env.example
+!*.env.sample
